@@ -10,18 +10,13 @@ This tiny piece of software tries to mitigate this by converting from the CSV fo
 
 ### The CSV format Metro uses
 ```text
-Date,Reference,Transaction Type,Money In, Money Out,Balance
-21/01/2019,17 JAN 19 MCDONALDS SOUTHEND ON S GBR,Card Purchase,0.00,6.79,3250.05
+Date,Details,Transaction Type,In,Out
+21/01/2023,17 JAN 19 MCDONALDS SOUTHEND ON S GBR,Card Purchase,0.00,6.79
 ```
 
 ### The CSV format FreeAgent needs
 ```text
-21/01/2019,-6.79,17 JAN 19 MCDONALDS SOUTHEND ON S GBR
-```
-
-### Bonus round: Metro Breaks their own format when it comes to their fees as there is no reference
-```text
-28/01/2019,,Account Maintenance Fee,0.00,5.00,3100.70
+21/01/2023,-6.79,17 JAN 19 MCDONALDS SOUTHEND ON S GBR
 ```
 
 ## Building it

@@ -69,8 +69,8 @@ class FromMetroAdapter(object):
         for item in self._csv.contents:
             record = TransactionRecord(
                 date=item['Date'],
-                amount=Decimal(item['Money In']) - Decimal(item[' Money Out']),
-                description=item['Reference']
+                amount=Decimal(item['In'] or 0) - Decimal(item['Out'] or 0),
+                description=item['Details']
             )
             yield record
 
